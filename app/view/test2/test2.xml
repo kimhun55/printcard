@@ -1,7 +1,7 @@
 <Page loaded="onPageLoaded"  actionBarHidden="true">
 <StackLayout orientation="vertical">
 <Label text="ยินดีตอนรับนักเรียน" class="h2 text-center" />
-<Button text="ถ่ายรูป" tap="Onlogin" class="btn btn-primary btn-active"/>
+<Button text="ถ่ายรูป" tap="Onpic" class="btn btn-primary btn-active"/>
 <Label text="{{ stu_fname }}" class="h4 text-center" />
 <Label text="{{ stu_lname }}" class="h4 text-center" />
 <Label text="{{ birthday }}" class="h4 text-center" />
