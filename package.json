@@ -12,6 +12,7 @@
   "dependencies": {
     "nativescript-background-http": "^2.5.1",
     "nativescript-camera": "0.0.8",
+    "nativescript-exit": "^1.0.0",
     "nativescript-theme-core": "^1.0.3",
     "tns-core-modules": "^2.6.0-2017-02-08-5576"
   },

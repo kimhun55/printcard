@@ -4,6 +4,7 @@ var frameModule = require("ui/frame");
 var observableModule = require("data/observable")
 var dialogs = require("ui/dialogs");
 var appSettings = require("application-settings");
+var appexit = require("nativescript-exit")
 
 let context = new observableModule.fromObject({
       user : "",
@@ -41,10 +42,21 @@ exports.Onlogin = ()=>{
                     });
 
                  }else{
+                     dialogs.alert({
+                    title: "error login",
+                    message: "รหัสผ่านไม่ถูกต้อง ",
+                    okButtonText: "รับทราบ"
+                })
                      console.log("error login")
                  }
 
             }).catch((error)=>{
+
+                dialogs.alert({
+                    title: "error login",
+                    message: "ติดต่อ server ไม่ได้ โปรดติดต่อห้องศูนย์ข้อมูล ",
+                    okButtonText: "รับทราบ"
+                })
                 console.log('erro catch')
                 console.dump(error);
             });
@@ -68,3 +80,6 @@ let setting ={
 }
 /*JSON.stringify => json to str*/
 /*JSON.pares() => str to json*/
+exports.goExit = ()=>{
+    appexit.exit();
+}

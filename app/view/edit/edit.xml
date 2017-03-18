@@ -1,16 +1,38 @@
 <Page loaded="onPageLoaded" >
-<ActionBar title="System Image">
+<ActionBar title="Edit data">
   <NavigationButton text="Go Back" tap="goback" android.systemIcon="ic_menu_back"></NavigationButton>
-  <ActionItem ios.systemIcon="2" tap="goedit" android.systemIcon="ic_menu_edit" ios.position="right"></ActionItem>
+
 </ActionBar>
 
+
+
 <StackLayout orientation="vertical">
-
-
-<Image id="pic" src="~/images/user-icon.png" tap="Onpic"/>
-<!--<Button text="ถ่ายรูป"  class="btn btn-primary btn-active"/>-->
-
-
+ <ScrollView class="page">
+<StackLayout class="page form p-15">
+    <Image id="pic" src="~/images/user-icon.png" class="img-circle"/>
+      <GridLayout class="input-field input-sides" rows="auto, auto" columns="*,*">
+          <Label text="คำนำหน้า" class="label font-weight-bold" row="0" col="0" />
+          <TextField  text= "{{ perfix_id }}" hint="Input text" class="input right" row="0" col="1" />
+          <StackLayout class="hr-light" row="1" colSpan="2"></StackLayout>
+        </GridLayout>
+         <GridLayout class="input-field input-sides" rows="auto, auto" columns="*,*">
+          <Label text="ชื่อ" class="label font-weight-bold" row="0" col="0" />
+          <TextField text="{{ stu_fname }}" hint="Input text" class="input right" row="0" col="1" />
+          <StackLayout class="hr-light" row="1" colSpan="2"></StackLayout>
+        </GridLayout>
+         <GridLayout class="input-field input-sides" rows="auto, auto" columns="*,*">
+          <Label text="นามสกุล" class="label font-weight-bold" row="0" col="0" />
+          <TextField  text="{{ stu_lname }}" hint="Input text" class="input right" row="0" col="1" />
+          <StackLayout class="hr-light" row="1" colSpan="2"></StackLayout>
+        </GridLayout>
+         <GridLayout class="input-field input-sides" rows="auto, auto" columns="*,*">
+          <Label text="รหัสบัตรประชาชน" class="label font-weight-bold" row="0" col="0" />
+          <TextField text="{{ people_id }}"  hint="Input text" class="input right" row="0" col="1" />
+          <StackLayout class="hr-light" row="1" colSpan="2"></StackLayout>
+        </GridLayout>
+</StackLayout>
+ </ScrollView>
+<!---
       <ScrollView class="page">
        <StackLayout class="page m-t-10">
               <Label text="ข้อมูลส่วน (โปรดตรวจสอบ)" class="h2" />
@@ -20,6 +42,7 @@
                 <Label text="คำนำหน้า" row="0" col="0" />
                 <Label text="{{ perfix_id }}" row="0" col="1" class="text-right" />
               </GridLayout>
+              
               <GridLayout rows="auto" columns="*,*" class="font-weight-bold m-t-5 w-full">
                 <Label text="ชื่อ" row="0" col="0" />
                 <Label text="{{ stu_fname }}" row="0" col="1" class="text-right" />
@@ -43,8 +66,8 @@
              
 
             </StackLayout>
-        </ScrollView>
-        <Button text="ยืนยัน ข้อมูล" tap="Onsave" class="btn btn-primary btn-active"/>
+        </ScrollView> -->
+
+        <Button text="แก้ไขเรียบร้อย" tap="Onedit"  class="btn btn-primary btn-active"/>
  </StackLayout>
- 
 </Page>
