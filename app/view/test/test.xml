@@ -1,19 +1,24 @@
-<Page loaded="onPageLoaded"  actionBarHidden="true">
-<StackLayout orientation="vertical">
-<Image src="~/images/logo_lbtech.gif" />
-<Label text="APP ถ่ายรูปทำบัตรนักเรียน" class="h3 text-center" horizontalAlignment="center"/>
-<Label text="วิทยาลัยเทคนิคลพบุรี" class="h3 text-center" horizontalAlignment="center"/>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onPageLoaded"  actionBarHidden="true" navigatingTo="navigatingTo" id="login-background" style="background-image:url('~/images/login-bg.jpg');">
 
-<StackLayout class="form">
-  <StackLayout class="input-field">
-    <Label class="label" text="รหัสนักศึกษา:"></Label>
-    <TextField text="{{ user }}" class="input input-border"></TextField>
-  </StackLayout>
-  <StackLayout class="input-field">
-    <Label class="label" text="วันเดือนปีเกิด:"></Label>
-    <TextField  text="{{ pass }}" class="input input-border"></TextField>
-  </StackLayout>
-  <Button text="login" tap="Onlogin" class="btn btn-primary btn-active"/>
-</StackLayout>
-</StackLayout>
+
+<GridLayout rows="auto, auto, auto" columns="*"  class="login-wrap">
+
+    <StackLayout class="logo-wrap">
+        <Image src="~/images/logo_lbtech.gif" class="img-rounded" />
+        <Label text="วิทยาลัยเทคนิคลพบุรี " textWrap="true" class="login-logo" row="0" col="0" />
+        <Label text="app ถ่ายรูปทำบัตรนักเรียน" class="login-logo-sub" textWrap="true" />            
+    </StackLayout>
+            
+    <StackLayout row="1" col="0" class="login-wrapper">        
+        <TextField hint="รหัสนักศึกษา" text="{{ user }}"  />
+        <StackLayout class="hr-light m-b-10" android:visibility="collapsed" />
+        <TextField hint="วัน/เดือน/ปี / 01/01/2559" text="{{ pass }}"  secure="true" />
+        <StackLayout class="hr-light m-b-10" android:visibility="collapsed" />    
+        <Button text="Sign in" class="btn btn-primary btn-rounded-lg" tap="Onlogin" />                            
+    </StackLayout>            
+
+    <Label row="2" col="0" text="Exit" class="go-back" textWrap="true" tap="goExit" />    
+
+</GridLayout>
+  
 </Page>

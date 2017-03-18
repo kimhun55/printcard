@@ -1,13 +1,13 @@
 <Page loaded="onPageLoaded"  actionBarHidden="true">
 <StackLayout orientation="vertical">
-<Label text="ยินดีตอนรับนักเรียน" class="h2 text-center" />
+<Label text="ยินดีตอนรับนักเรียน" class="h2 text-center"/>
 <Button text="ถ่ายรูป" tap="Onpic" class="btn btn-primary btn-active"/>
-<Image id="pic">
+<Image id="pic" />
+<Label text="Fname" />
 <Label text="{{ stu_fname }}" class="h4 text-center" />
+<Label text="Lname" />
 <Label text="{{ stu_lname }}" class="h4 text-center" />
+<Label text="Birthday" />
 <Label text="{{ birthday }}" class="h4 text-center" />
-<Label text="{{ minor_name }}" class="h4 text-center" />
-<Label text="{{ major_name }}" class="h4 text-center" />
-<Label text="{{ group_id }}" class="h4 text-center" />
 </StackLayout>
 </Page>

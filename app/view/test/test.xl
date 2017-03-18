@@ -1,0 +1,19 @@
+<Page loaded="onPageLoaded"  actionBarHidden="true">
+<StackLayout orientation="vertical">
+<Image src="~/images/logo_lbtech.gif" />
+<Label text="APP ถ่ายรูปทำบัตรนักเรียน" class="h3 text-center" horizontalAlignment="center"/>
+<Label text="วิทยาลัยเทคนิคลพบุรี" class="h3 text-center" horizontalAlignment="center"/>
+
+<StackLayout class="form">
+  <StackLayout class="input-field">
+    <Label class="label" text="รหัสนักศึกษา:"></Label>
+    <TextField text="{{ user }}" class="input input-border"></TextField>
+  </StackLayout>
+  <StackLayout class="input-field">
+    <Label class="label" text="วันเดือนปีเกิด:"></Label>
+    <TextField  text="{{ pass }}" class="input input-border"></TextField>
+  </StackLayout>
+  <Button text="login" tap="Onlogin" class="btn btn-primary btn-active"/>
+</StackLayout>
+</StackLayout>
+</Page>
