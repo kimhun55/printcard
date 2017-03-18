@@ -1,0 +1,17 @@
+Page{
+    background-color: cadetblue;
+}
+
+Label{
+    font-size : 23;
+    font-weight :bold;
+}
+Image{
+    margin-top :30;
+    width: 200;
+    height: 200;
+}
+TextField{
+    
+    height: 20;
+}
